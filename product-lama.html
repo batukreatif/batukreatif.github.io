@@ -1,0 +1,40 @@
+---
+language: id
+layout: product
+title: Title in product
+description: Description in &amp; product
+keyword: keyword in product
+image: /images/logo.png
+---
+<div class="site-intro">
+    <h1>
+        Product H1
+    </h1>
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+    </p>
+</div>
+<div class="action-hint quick">Scroll or drag to Right explore.</div>
+<div class="action-hint-for-touch">Swipe right to explore.</div>
+<!-- Swiper -->
+
+<div class="swiper-container" id="posts">
+    <div class="swiper-wrapper">
+        {% for item in site.data-product %}
+        <div class="swiper-slide {{ item.sticky }}">
+            <img src="{{ item.image }}" alt="{{ item.title }}">
+            <div class="post-intro">
+                <h3><a href="{{ item.url }}">"{{ item.title }}"</a></h3>
+                <div class="two spacing"></div>
+                <p class="read-more-button">
+                    <a href="{{ item.url }}" class="button boxed small black">Read More</a>
+                </p>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>

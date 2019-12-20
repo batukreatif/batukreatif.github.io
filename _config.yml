@@ -1,0 +1,106 @@
+creator: dennyrwa
+lang: id
+locale: id_ID
+themecolor: ef8f4c
+company: PT. Batu Kreatif
+siteurl: https://batukreatif.com
+icon: favicon.ico
+logo: /images/logo.png
+alt-logo: Logo of Batu Kreatif
+twitter:
+facebook: 
+instagram: 
+youtube:
+pinterest:
+tumblr: 
+copyright: © Copyright <strong>PT. Batu Kreatif</strong>. <br>All Rights Reserved and All the trademarks are the property of their respective owners
+whatsapp-float-desktop: https://web.whatsapp.com/send?phone=62355531997&text=Hallo, PT. Batu Kreatif
+whatsapp-float-phone: whatsapp://send?text=Hallo, PT. Batu Kreatif!&phone=+62355531997
+exclude: [README.md]
+email: info@batukreatif.com
+streetAddress: Dsn Cerme RT 004 RW 03, Campurdarat
+postOfficeBoxNumber: 66272
+addressLocality: Tulungagung
+addressRegion: Jawa Timur
+postalCode: 66272
+addressCountry: Indonesia
+latitude: -8.1770722
+longitude: 111.8453871
+hasMap: https://www.google.com/maps/place/8%C2%B010'37.5%22S+111%C2%B050'43.4%22E/@-8.1770833,111.8432002,17z/data=!3m1!4b1!4m9!1m3!11m2!2sPVXSjbpbOSGyUt9-tyMk-IPDBVh8GA!3e3!3m4!1s0x0:0x0!8m2!3d-8.1770722!4d111.8453871
+openingHours: Mo, Tu, We, Th, Fr 09:00-19:00 Sa 09:00-15:00
+priceRange: Rp.200.000 - Rp.20.000.000
+contactType: Customer Service
+telephone: 62355531997
+whatsapp-api: https://api.whatsapp.com/send?text=Hallo%20PT.%20Batu%20Kreatif.com%20(Nama)%20(Alamat)%20&phone=62355531997
+fb_app_id: 431790914440143
+google-my-bussiness: <iframe frameborder="0" style="border:0" src="https://www.google.com/maps/place/8%C2%B010'37.5%22S+111%C2%B050'43.4%22E/@-8.1783433,111.8450337,16.64z/data=!4m9!1m3!11m2!2sPVXSjbpbOSGyUt9-tyMk-IPDBVh8GA!3e3!3m4!1s0x0:0x0!8m2!3d-8.1770722!4d111.8453871" allowfullscreen=""></iframe>
+permalink: pretty
+plugins:
+  - jekyll-feed
+collections:
+  data-inspiration:
+    output: true
+    permalink: /inspiration/:name/
+  data-1-modern-style:
+    output: true
+    permalink: /modern-style/:name/
+  data-1-modern-style-parquet:
+    output: true
+    permalink: /modern-style/parquet/:name/
+  data-1-modern-style-scored:
+    output: true
+    permalink: /modern-style/scored/:name/
+  data-1-modern-style-combed:
+    output: true
+    permalink: /modern-style/combed/:name/
+  data-1-modern-style-bush-hammer:
+    output: true
+    permalink: /modern-style/bush-hammer/:name/
+  data-1-modern-style-polished-honed:
+    output: true
+    permalink: /modern-style/polished-honed/:name/
+  data-1-modern-style-paso:
+    output: true
+    permalink: /modern-style/paso/:name/
+  data-1-modern-style-segmented-sandblasted-finish:
+    output: true
+    permalink: /modern-style/segmented-sandblasted-finish/:name/
+  data-1-modern-style-brushed-sand-blasted:
+    output: true
+    permalink: /modern-style/brushed-sand-blasted/:name/
+  data-1-modern-style-leather-finish:
+    output: true
+    permalink: /modern-style/leather-finish/:name/
+  data-2-classic-style:
+    output: true
+    permalink: /classic-style/:name/
+  data-2-classic-style-biscotti:
+    output: true
+    permalink: /classic-style/biscotti/:name/
+  data-2-classic-style-stack-stone:
+    output: true
+    permalink: /classic-style/stack-stone/:name/
+  data-2-classic-style-split-face:
+    output: true
+    permalink: /classic-style/split-face/:name/
+  data-2-classic-style-ledge-stone:
+    output: true
+    permalink: /classic-style/ledge-stone/:name/
+  data-2-classic-style-bush-hammer:
+    output: true
+    permalink: /classic-style/bush-hammer/:name/
+  data-2-classic-style-tuscan-ashlar:
+    output: true
+    permalink: /classic-style/tuscan-ashlar/:name/
+  data-3-landscape-and-pools:
+    output: true
+    permalink: /landscape-and-pools/:name/
+  data-3-wall-caps-and-coping:
+    output: true
+    permalink: /wall-caps-and-coping/:name/
+  data-3-wainscot:
+    output: true
+    permalink: /wainscot/:name/
+  data-4-residential-exterior:
+    output: true
+    permalink: /residential-exterior/:name/
