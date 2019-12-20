@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="{{ page.language }}" class="no-js">
+
+<head>
+    <link rel="icon" type="image/png" sizes="32x32" href="/{{ site.icon }}">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <title>{{ page.title }}</title>
+    <meta property="fb:app_id" content="{{ site.fb_app_id }}" />
+    <meta property="og:url" content="{{ site.siteurl }}{{ page.url }}" />
+    <meta property="og:type" content="{{ site.type }}" />
+    <meta property="og:title" content="{{ page.title }} | {{ site.company }}" />
+    <meta property="og:description" content="{{ page.description }}" />
+    <meta property="og:image" content="{{ site.siteurl }}{{ page.photos }}" />
+    <meta name="description" content="{{ page.description }}" />
+    <meta name="keywords" content="{{ page.keywords }}">
+    <link rel="canonical" href="{{ page.url | replace:'index.html',''}}" />
+    {% include css.html %}
+    <script type='application/ld+json'>
+    {
+        "@context": "http://www.schema.org",
+        "@type": "LocalBusiness",
+        "name": "{{ site.company }}",
+        "url": "{{ site.siteurl }}",
+        "logo": "{{ site.logo }}",
+        "image": "{{ page.image }}",
+        "description": "{{ page.description }}",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "{{ site.streetAddress }}",
+            "postOfficeBoxNumber": "{{ site.postOfficeBoxNumber }}",
+            "addressLocality": "{{ site.addressLocality }}",
+            "addressRegion": "{{ site.addressRegion }}",
+            "postalCode": "{{ site.postalCode }}",
+            "addressCountry": "{{ site.addressCountry }}"
+        },
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": "{{ site.latitude }}",
+            "longitude": "{{ site.longitude }}"
+        },
+        "hasMap": "{{ site.hasMap }}",
+        "openingHours": "{{ site.openingHours }}",
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+{{ site.telephone }}",
+            "contactType": "{{ site.contactType }}"
+        },
+        "telephone": "+{{ site.telephone }}",
+        "priceRange": "{{ site.priceRange }}"
+    }
+    </script>
+    <style>
+    .list-horizontal {
+        margin-left: 0px;
+    }
+
+    .list-horizontal li {
+        display: inline-block;
+    }
+
+    .list-horizontal .verticalline {
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+
+    .list-horizontal li a {
+        font-weight: 500;
+    }
+
+    /*.list-horizontal li:before {
+    content: '\00a0\2022\00a0\00a0';
+    color:#999;
+    color:rgba(0,0,0,0.5);
+    font-size:11px;
+    }*/
+    .list-horizontal li:first-child:before {
+        content: '';
+    }
+
+    #logo {
+        width: 15%;
+    }
+    </style>
+</head>
+
+<body id="home">
+    <div id="logo">
+        <a href="/" title="{{ site.alt-logo }}">
+            <h1><img src="{{ site.logo }}" alt="{{ site.alt-logo }}"></h1>
+        </a>
+    </div>
+    {% include nav.html %}
+    {% include float-button.html %}
+    <div class="site-intro">
+        <h1>PT. Batu Kreatif</h1>
+        <p>
+            PT. Batu Kreatif adalah perusahaan pengolahan batu alam menjadi lapisan-lapisan, baik untuk permukaan vertikal maupun horizontal, pabrik kami berada di pusat industri batu marmer terbesar di dunia, Tulungagung, Jawa Timur, Indonesia
+        </p>
+        <div class="spacing"></div>
+        <p>
+            <a href="/about/" class="button boxed black">Know more</a>
+        </p>
+    </div>
+    <div class="action-hint">Scroll or drag to Left explore.</div>
+    <div class="action-hint-for-touch"><strong>SWIPE  &#62;&#62;</strong></div>
+    <!-- Swiper -->
+    <div class="swiper-container" id="main">
+        <div class="swiper-wrapper">
+               {{ content }}
+        </div>
+    </div>
+    <div id="call-to-action">
+        <h2>Ada ide  yang lain?</h2>
+        <p>Ada pertanyaan dan ide-ide kreatif lainnya untuk mempercantik rumah Anda, segera hubungi kami.</p>
+        <p><a href="/contact/" class="button black boxed small">Hubungi Kami</a></p>
+        {% include js.html %}
+</body>
+
+</html>

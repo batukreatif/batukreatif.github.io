@@ -1,0 +1,23 @@
+<div class="full">
+    <div class="large-6 columns">
+        <div class="contact-block-bottom">
+            <h3>Contact Us.</h3>
+            <p class="big-text">Tertarik, masih ingin tanya-tanya, hubungi kami segera di kontak di bawah.</p>
+            <div class="two spacing"></div>
+            <p class="contact-email"><em>Alamat Kami</em> <a href="{{ site.hasMap }}" title="Alamat Kami {{ site.streetAddress }}, {{ site.addressLocality }}, {{ site.addressRegion }} {{ site.postalCode }} {{ site.addressCountry }}">{{ site.streetAddress }}, {{ site.addressLocality }}, {{ site.addressRegion }} {{ site.postalCode }} {{ site.addressCountry }}</a></p>
+            <p class="contact-email"><em>Telephone</em> <a href="tel:+{{ site.telephone }}" title="Telephone">+{{ site.telephone }}</a></p>
+            <p class="contact-email"><em>Whatsapp</em> <a href="{{ site.whatsapp-api }}" title="Whatsapp : {{ site.telephone }}">+{{ site.telephone }}</a></p>
+            <p class="contact-email"><em>Write us at</em> <a href="mailto:{{ site.email }}" title="Write to us">{{ site.email }}</a></p>
+        </div>
+    </div>
+    <div class="large-6 columns">
+        <div class="contact-block-bottom dark">
+            <h3 class="colored-title">Langsung Pesan.</h3>
+            <a href="https://api.whatsapp.com/send?text=Hallo%20PT.%20Batu%20Kreatif.com%20Saya%20Pesan%20{{ page.title }}%0ANama:%0AAlamat:%20&phone={{ site.telephone }}">
+                <p class="big-text">Ingin Pesan {{ page.title }} bisa hanya dengan klik saja</p>
+            </a>
+            <div class="two spacing"></div>
+            <p class="contact-email"><em>Pesan {{ page.title }} melalui Whatsapp</em> <a href="https://api.whatsapp.com/send?text=Hallo%20PT.%20Batu%20Kreatif.com%20Saya%20Pesan%20{{ page.title }}%0ANama:%0AAlamat:%20&phone={{ site.telephone }}" title="Pesan {{ page.title }} melalui Whatsapp">+{{ site.telephone }}</a></p>
+        </div>
+    </div>
+</div>

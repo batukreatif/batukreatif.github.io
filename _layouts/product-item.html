@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="{{ page.language }}">
+
+<head>
+    <link rel="icon" type="image/png" sizes="32x32" href="/{{ site.icon }}">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <title>{{ page.title }}</title>
+    <meta name="description" content="{{ page.description }}" />
+    <meta name="keywords" content="{{ page.keywords }}">
+    <link rel="canonical" href="{{ page.url | replace:'index.html',''}}" />
+    {% include css.html %}
+    <script type='application/ld+json'>
+    {
+        "@context": "http://www.schema.org",
+        "@type": "Organization",
+        "name": "{{ site.company }}",
+        "url": "{{ site.siteurl }}",
+        "logo": "{{ site.logo }}",
+        "image": "{{ page.image }}",
+        "description": "{{ page.description }}",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "{{ site.streetAddress }}",
+            "postOfficeBoxNumber": "{{ site.postOfficeBoxNumber }}",
+            "addressLocality": "{{ site.addressLocality }}",
+            "addressRegion": "{{ site.addressRegion }}",
+            "postalCode": "{{ site.postalCode }}",
+            "addressCountry": "{{ site.addressCountry }}"
+        },
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": "{{ site.latitude }}",
+            "longitude": "{{ site.longitude }}"
+        },
+        "openingHours": "{{ site.openingHours }}",
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+{{ site.telephone }}",
+            "contactType": "{{ site.contactType }}"
+        }
+    }
+    </script>
+    <style>
+    .list-horizontal {
+
+        margin-left: 0px;
+    }
+
+    .list-horizontal li {
+        display: inline-block;
+    }
+
+    .list-horizontal .verticalline {
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+
+    .list-horizontal li a {
+        font-weight: 500;
+    }
+
+    /*.list-horizontal li:before {
+        content: '\00a0\2022\00a0\00a0';
+        color:#999;
+        color:rgba(0,0,0,0.5);
+        font-size:11px;
+        }*/
+    .list-horizontal li:first-child:before {
+        content: '';
+    }
+
+    #logo {
+        width: 15%;
+    }
+    </style>
+</head>
+
+<body id="home">
+    <div id="logo">
+        <a href="/" title="{{ site.alt-logo }}">
+            <h1><img src="{{ site.logo }}" alt="{{ site.alt-logo }}"></h1>
+        </a>
+    </div>
+    {% include nav.html %}
+    {% include float-button.html %}
+    <div class="site-intro">
+        <h1>{{ page.title }}</h1>
+        <p>{{ page.article-1 }}</p>
+    </div>
+    <div class="action-hint quick">Click &amp; drag to Right</div>
+    <div class="action-hint-for-touch">Swipe right to explore.</div>
+    <!-- Swiper -->
+    <div class="swiper-container" id="about">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide media">
+                <img src="{{ page.image }}"><img>
+            </div>
+            <div class="swiper-slide">
+                <h2>{{ page.title-right }}</h2>
+                <p class="big-text">{{ page.article-right }}</p>
+                <div class="action-hint">Scroll to explore.</div>
+                <div class="action-hint-for-touch">Scroll to explore.</div>
+            </div>
+        </div>
+    </div>
+    <div class="four spacing"></div>
+    <div class="full no-right">
+        <div class="text-block-right">
+            <h2>{{ page.title-2 }}</h2>
+            <p class="big-text">{{ page.article-2 }}</p>
+            <p>{{ page.article-3 }}</p>
+        </div>   
+    </div>
+    <div class="full">
+        <div class="swiper-container" id="office-images">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img alt="{{ page.alt-slide1 }}" src="{{ page.slide1 }}" /></div>
+                <div class="swiper-slide"><img alt="{{ page.alt-slide2 }}" src="{{ page.slide2 }}" /></div>
+                <div class="swiper-slide"><img alt="{{ page.alt-slide3 }}" src="{{ page.slide3 }}" /></div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+        <!-- Add Arrows -->
+        <div class="swiper-arrows">
+            <div class="swiper-button-next office"></div>
+            <div class="swiper-button-prev office"></div>
+        </div>
+    </div>
+    {% include contact-us.html %}
+    {% include js.html %}
+    </div>
+</body>
+
+</html>

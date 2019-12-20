@@ -1,0 +1,115 @@
+<html lang="{{ page.language }}" class="no-js">
+
+<head>
+    <link rel="icon" type="image/png" sizes="32x32" href="/{{ site.icon }}">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <title>{{ page.title }}</title>
+    <meta name="description" content="{{ page.description }}" />
+    <meta name="keywords" content="{{ page.keywords }}">
+    <link rel="canonical" href="{{ page.url | replace:'index.html',''}}" />
+    {% include css.html %}
+    <script type='application/ld+json'>
+    {
+        "@context": "http://www.schema.org",
+        "@type": "WebSite",
+        "name": "{{ site.company }}",
+        "alternateName": "{{ page.title }}",
+        "url": "{{ site.url }}"
+    }
+    </script>
+    <style>
+    .list-horizontal {
+
+        margin-left: 0px;
+    }
+
+    .list-horizontal li {
+        display: inline-block;
+    }
+
+    .list-horizontal .verticalline {
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+
+    .list-horizontal li a {
+        font-weight: 500;
+    }
+
+    /*.list-horizontal li:before {
+        content: '\00a0\2022\00a0\00a0';
+        color:#999;
+        color:rgba(0,0,0,0.5);
+        font-size:11px;
+        }*/
+    .list-horizontal li:first-child:before {
+        content: '';
+    }
+
+    .mid-text {
+        font-size: 18px;
+        text-align: justify;
+    }
+
+    .columns h2 {
+        font-size: 40px;
+    }
+
+    #logo {
+        width: 18%;
+    }
+
+    .thumbnail {
+        max-width: 40%;
+    }
+
+    /** LIGHTBOX MARKUP **/
+
+    .lightbox {
+        /** Default lightbox to hidden */
+        display: none;
+
+        /** Position and style */
+        position: fixed;
+        z-index: 999;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        top: 0;
+        left: 0;
+        background: rgba(0, 0, 0, 0.8);
+    }
+
+    .lightbox img {
+        height: 100%
+        /** Pad the lightbox image */
+        /*max-width: 100%;
+        max-height: 100%;
+        margin-top: 2%;*/
+    }
+
+    .lightbox:target {
+        /** Remove default browser outline */
+        outline: none;
+
+        /** Unhide lightbox **/
+        display: block;
+    }
+    </style>
+</head>
+
+<body>
+    <div id="logo">
+        <a href="/" title="{{ site.alt-logo }}">
+            <h1><img src="{{ site.logo }}" alt="{{ site.alt-logo }}"></h1>
+        </a>
+    </div>
+    {% include nav.html %}
+    {% include float-button.html %}
+    {{ content }}
+    {% include js.html %}
+</body>
+
+</html>
